@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { getAllList } from '../../service/transferService'
 import type { TransferItem } from '../../model/transfer'
 import List from '../../component/List/List';
@@ -49,8 +49,8 @@ const TransferList = () => {
     <div className='container'>
        <List  name="left-list" key="left-list" list={fromList} checkItem={leftListItemClick}></List>
        <div className='action-container'>
-         <Transfer handleAction={transferRight} labelText='>'></Transfer>
-         <Transfer handleAction={transferLeft} labelText='<'></Transfer>
+         <Transfer name="transfer-to" handleAction={transferRight} labelText='>'></Transfer>
+         <Transfer name="transfer-from"handleAction={transferLeft} labelText='<'></Transfer>
        </div>
        <List name="right-list" key="right-list" list={toList} checkItem={rightListItemClick}></List>
     </div>

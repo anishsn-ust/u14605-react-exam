@@ -4,11 +4,12 @@ import "./Transfer.css";
 type Props = {
     labelText: string,
     handleAction: ()=>void
+    name: string
 }
-const Transfer:React.FC<Props> = ({labelText,handleAction }) => {
+const Transfer:React.FC<Props> = ({labelText,handleAction,name }) => {
   return (
     <div className='transfer-container'>
-        <button onClick={handleAction}>{labelText}</button>
+        <button data-testid={name} onClick={handleAction}>{labelText}</button>
     </div>
   )
 }

@@ -12,7 +12,7 @@ const List:React.FC<Props> = ({list, checkItem, name}) => {
   return (
     <ul className={`list-container ${name}`}>
         {list.map((item: TransferItem, index: number)=>(
-           <li key={`li-${index}`}><input key={`checkbox-${index}`} type="checkbox" checked={item.checked} onChange={()=>{setIsChecked(!isChecked);checkItem(item.label)}}/><span className={`label-${name}-${index}`}>{item.label}</span></li> 
+           <li key={`li-${index}`}><input data-testid={`checkbox-${name}-${index}`} key={`checkbox-${index}`} type="checkbox" checked={item.checked} onChange={()=>{setIsChecked(!isChecked);checkItem(item.label)}}/><span className={`label-${name}-${index}`}>{item.label}</span></li> 
         ))}
     </ul>
   )
