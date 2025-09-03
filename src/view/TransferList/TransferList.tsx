@@ -39,7 +39,7 @@ const TransferList = () => {
        toList = toList.filter((item:TransferItem)=>{
         return !listToTransferLeft.find((i)=>i.label === item.label)
        });
-       setToList(fromList);
+       setToList(toList);
        fromList = fromList.concat(listToTransferLeft);
        fromList.forEach((item:TransferItem)=>item.checked = false);
        setFromList(fromList);
