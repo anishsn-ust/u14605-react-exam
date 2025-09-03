@@ -1,0 +1,7 @@
+.list-container {
+    border: 1px solid #ccc;
+    height: auto;
+    width: 200px;
+    min-height: 200px;
+    list-style-type: none;
+}
