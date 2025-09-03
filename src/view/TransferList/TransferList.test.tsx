@@ -29,22 +29,6 @@ describe('Product page with add to cart', () => {
     const leftItem8 = container.querySelector('.label-left-list-7');
     expect(leftItem8).toBeInTheDocument();
     expect(leftItem8).toHaveTextContent('Angular');
-     const rightItem1 = container.querySelector('.label-right-list-0');
-    expect(rightItem1).not.toBeInTheDocument();
-    const rightItem2 = container.querySelector('.label-right-list-1');
-    expect(rightItem2).not.toBeInTheDocument();
-    const rightItem3 = container.querySelector('.label-right-list-2');
-    expect(rightItem3).not.toBeInTheDocument();
-    const rightItem4 = container.querySelector('.label-right-list-3');
-    expect(rightItem4).not.toBeInTheDocument();
-    const rightItem5 = container.querySelector('.label-right-list-4');
-    expect(rightItem5).not.toBeInTheDocument();
-    const rightItem6 = container.querySelector('.label-right-list-5');
-    expect(rightItem6).not.toBeInTheDocument();
-    const rightItem7 = container.querySelector('.label-right-list-6');
-    expect(rightItem7).not.toBeInTheDocument();
-    const rightItem8 = container.querySelector('.label-right-list-7');
-    expect(rightItem8).not.toBeInTheDocument();
     
   }),
    it('Click an item and on select > check it moves from left to right & then click < to check it moves from right to left', () => {

@@ -1,7 +1,13 @@
 .list-container {
+    padding: 20px;
+}
+.list-container ul{
     border: 1px solid #ccc;
     height: auto;
     width: 200px;
     min-height: 200px;
     list-style-type: none;
+}
+.list-container ul li{
+    text-align: left;
 }
