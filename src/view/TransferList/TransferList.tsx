@@ -1,12 +1,12 @@
 import { useState } from 'react'
-import { getAllList } from '../../service/transferService'
+import { getAllListItems } from '../../service/transferService'
 import type { TransferItem } from '../../model/transfer'
 import List from '../../component/List/List';
 import Transfer from '../../component/Transfer/Transfer';
 import "./TransferList.css";
 
 const TransferList = () => {
-    let [fromList, setFromList]= useState<TransferItem[]>(getAllList());
+    let [fromList, setFromList]= useState<TransferItem[]>(getAllListItems());
     let [toList, setToList]= useState<TransferItem[]>([]);
     const checkItemsInList = (list:TransferItem[], checkedString: string) => {
         list.forEach((item:TransferItem) => {
