@@ -38,7 +38,7 @@ const TransferList = () => {
        <List  name="left-list" key="left-list" list={fromList} checkItem={checkItemsInList}></List>
        <div className='action-container'>
          <Transfer name="transfer-to" handleAction={transferRight} labelText='>'></Transfer>
-         <Transfer name="transfer-from"handleAction={transferLeft} labelText='<'></Transfer>
+         <Transfer name="transfer-from" handleAction={transferLeft} labelText='<'></Transfer>
        </div>
        <List name="right-list" key="right-list" list={toList} checkItem={checkItemsInList}></List>
     </div>

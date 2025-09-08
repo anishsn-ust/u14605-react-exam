@@ -1,4 +1,4 @@
-export const getAllList = ()=> {
+export const getAllListItems = ()=> {
 
     return [
         {
