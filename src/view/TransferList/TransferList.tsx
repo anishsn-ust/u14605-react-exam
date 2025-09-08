@@ -18,9 +18,7 @@ const TransferList = () => {
     }
     const transferRight= ()=> {
        const listToTransferRight=fromList.filter((item:TransferItem)=>item.checked);
-       fromList = fromList.filter((item:TransferItem)=>{
-        return !listToTransferRight.find((i)=>i.label === item.label)
-       })
+       fromList = fromList.filter((item:TransferItem)=>!listToTransferRight.find((i)=>i.label === item.label));
        setFromList(fromList);
        toList=toList.concat(listToTransferRight);
        toList.forEach((item:TransferItem)=>item.checked = false);
@@ -28,9 +26,7 @@ const TransferList = () => {
     }
     const transferLeft= ()=> {
        const listToTransferLeft=toList.filter((item:TransferItem)=>item.checked);
-       toList = toList.filter((item:TransferItem)=>{
-        return !listToTransferLeft.find((i)=>i.label === item.label)
-       });
+       toList = toList.filter((item:TransferItem)=> !listToTransferLeft.find((i)=>i.label === item.label));
        setToList(toList);
        fromList = fromList.concat(listToTransferLeft);
        fromList.forEach((item:TransferItem)=>item.checked = false);
