@@ -8,16 +8,8 @@ import "./TransferList.css";
 const TransferList = () => {
     let [fromList, setFromList]= useState<TransferItem[]>(getAllList());
     let [toList, setToList]= useState<TransferItem[]>([]);
-    const leftListItemClick = (checkedString: string) => {
-        fromList.forEach((item:TransferItem) => {
-          if(item.label === checkedString) {
-            item.checked= true;
-            return
-          }
-        })
-    }
-    const rightListItemClick = (checkedString: string) => {
-        toList.forEach((item:TransferItem) => {
+    const checkItemsInList = (list:TransferItem[], checkedString: string) => {
+        list.forEach((item:TransferItem) => {
           if(item.label === checkedString) {
             item.checked= true;
             return
@@ -47,12 +39,12 @@ const TransferList = () => {
 
   return (
     <div className='container'>
-       <List  name="left-list" key="left-list" list={fromList} checkItem={leftListItemClick}></List>
+       <List  name="left-list" key="left-list" list={fromList} checkItem={checkItemsInList}></List>
        <div className='action-container'>
          <Transfer name="transfer-to" handleAction={transferRight} labelText='>'></Transfer>
          <Transfer name="transfer-from"handleAction={transferLeft} labelText='<'></Transfer>
        </div>
-       <List name="right-list" key="right-list" list={toList} checkItem={rightListItemClick}></List>
+       <List name="right-list" key="right-list" list={toList} checkItem={checkItemsInList}></List>
     </div>
   )
 }
