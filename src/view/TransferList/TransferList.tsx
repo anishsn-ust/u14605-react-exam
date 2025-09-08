@@ -28,7 +28,7 @@ const TransferList = () => {
 
   return (
     <div className='container'>
-       <List  name="left-list" key="left-list" list={fromList} ></List>
+       <List name="left-list" key="left-list" list={fromList} ></List>
        <div className='action-container'>
          <Transfer name="transfer-to" handleAction={transferRight} labelText='>'></Transfer>
          <Transfer name="transfer-from" handleAction={transferLeft} labelText='<'></Transfer>

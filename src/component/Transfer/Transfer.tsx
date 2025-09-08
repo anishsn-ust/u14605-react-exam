@@ -6,12 +6,12 @@ type Props = {
     handleAction: ()=>void
     name: string
 }
-const Transfer:React.FC<Props> = ({labelText,handleAction,name }) => {
+const Transfer:React.FC<Props> = React.memo(({labelText,handleAction,name }) => {
   return (
     <div className='transfer-container'>
         <button data-testid={name} onClick={handleAction}>{labelText}</button>
     </div>
   )
-}
+})
 
 export default Transfer

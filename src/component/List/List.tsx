@@ -6,7 +6,7 @@ type Props= {
     list: TransferItem[];
     name: string
 }
-const List:React.FC<Props> = ({list, name}) => {
+const List:React.FC<Props> = React.memo(({list, name}) => {
    const [isChecked, setIsChecked] = useState(false);
     const checkItemsInList = (checkedString: string) => {
         list.forEach((item:TransferItem) => {
@@ -25,6 +25,6 @@ const List:React.FC<Props> = ({list, name}) => {
         </ul>
     </div>
   )
-}
+})
 
 export default List
